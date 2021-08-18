@@ -1,11 +1,83 @@
-/* pages/coach-list/list.wxss */
-.coach-detail{
-  padding:48rpx;
-  border-radius:16rpx;
-  background-color:#31353F;
-  font-size:28rpx;
-  color:#fff;
-  margin-top:40rpx;
-  width:80% !important;
-  margin-left:30rpx !important
+.coach-list-container {
+  background-color: #23262c;
+}
+.coach-list-container swiper {
+  height: 380rpx !important;
+}
+.coach-list-container swiper swiper-item .coach-item-image {
+  margin-top: 40rpx;
+  margin-left: 25rpx;
+  width: 700rpx;
+  height: 344rpx;
+}
+.coach-list-container swiper swiper-item .coach-item {
+  color: #fff;
+  margin-top: -330rpx;
+  margin-left: 80rpx;
+  display: flex;
+}
+.coach-list-container swiper swiper-item .coach-item .coach-item-left {
+  width: 380rpx;
+}
+.coach-list-container swiper swiper-item .coach-item .coach-item-right {
+  margin-top: 42rpx;
+}
+.coach-list-container swiper swiper-item .coach-item .coach-item-right image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 30%;
+}
+.coach-list-container .exercise-goal-title {
+  color: #fff;
+  font-weight: bold;
+  margin-top: 100rpx;
+  margin-left: 40rpx;
+}
+.coach-list-container .exercise-goal {
+  display: flex;
+  color: #fff;
+  margin-top: 40rpx;
+}
+.coach-list-container .exercise-goal .exercise-goal-item {
+  margin-left: 80rpx;
+}
+.coach-list-container .exercise-goal .exercise-goal-item .goal-item-top {
+  background-color: #393F4D;
+  padding: 12rpx;
+  border-radius: 16rpx;
+}
+.coach-list-container .exercise-goal .exercise-goal-item .goal-item-top image {
+  width: 72rpx;
+  height: 72rpx;
+}
+.coach-list-container .exercise-goal .exercise-goal-item .goal-item-bottom {
+  font-size: 24rpx;
+  text-align: center;
+}
+.coach-list-container .choose-title {
+  color: #fff;
+  font-weight: bold;
+  margin-top: 100rpx;
+  margin-left: 40rpx;
+}
+.coach-detail {
+  padding: 48rpx;
+  border-radius: 16rpx;
+  background-color: #31353F;
+  font-size: 28rpx;
+  color: #fff;
+  margin-top: 40rpx;
+  width: 80% !important;
+  margin-left: 30rpx !important;
+}
+.coach-detail view {
+  margin-top: 74rpx;
+}
+.coach-detail view:nth-child(1) {
+  margin-top: 0;
+}
+.sure-button {
+  text-align: center;
+  margin-top: 40rpx;
+  padding-bottom: 20rpx;
 }

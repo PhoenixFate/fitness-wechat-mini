@@ -1,5 +1,0 @@
-export const img_my_classes = 'https://lifting-ren-user.oss-cn-hangzhou.aliyuncs.com/resources/my_classes.png'
-export const img_my_coach = 'https://lifting-ren-user.oss-cn-hangzhou.aliyuncs.com/resources/my_coach.png'
-export const img_my_intake = 'https://lifting-ren-user.oss-cn-hangzhou.aliyuncs.com/resources/my_intake.png'
-export const img_my_plan = 'https://lifting-ren-user.oss-cn-hangzhou.aliyuncs.com/resources/my_plan.png'
-export const img_my_report = 'https://lifting-ren-user.oss-cn-hangzhou.aliyuncs.com/resources/my_report.png'

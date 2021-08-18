@@ -1,68 +1,44 @@
 <!--pages/purchase/purchase.wxml-->
-<view style="height:100vh;position:relative">
-  <view style="height:50rpx"></view>
-  <swiper style="height:380rpx !important" current = "{{currentIndex}}" bindchange="swipeCard">
+<view class="purchase-container">
+  <view class="top-empty"></view>
+  <swiper current="{{currentIndex}}" bindchange="swipeCard">
     <swiper-item wx:for="{{list}}" wx:for-item="item" wx:key="vipCardId" wx:for-index="index">
       <view class="card-main card-type-{{index}}">
         <view style="display:flex">
           <view class="card-title">{{item.vipCardName}}</view>
           <view class="card-day">{{item.addVipDays}}天</view>
         </view>
-        <view style="line-height:120rpx;margin-left:100rpx">
-          <text class="card-vip" style="margin-left:80rpx">V</text>
-          <text class="card-vip" style="margin-left:30rpx">I</text>
-          <text class="card-vip" style="margin-left:30rpx">P</text>
+        <view class="vip">
+          <text class="vip-item">V</text>
+          <text class="vip-item">I</text>
+          <text class="vip-item">P</text>
         </view>
-    </view>
+      </view>
     </swiper-item>
   </swiper>
-  
-  <view>
-    <view style="display: flex; font-size: 36rpx;font-weight: bold;padding:20rpx">支付方式</view>
+
+  <view class="pay">
+    <view style="" class="title">支付方式</view>
     <van-radio-group value="{{ radio }}">
-    <van-cell-group>
-      <!-- <van-cell clickable data-name="1" bind:click="selectAliPay">
-        <view slot="title" style="display:flex">
-          <image style="width:50rpx;height:50rpx" src="../../images/zfb.jpg"></image>
-          <view class="van-cell-text" style="margin-left:30rpx">支付宝</view>
-        </view>
-        <van-radio slot="right-icon" name="1" />
-      </van-cell> -->
-      <van-cell clickable data-name="2" bind:click="selectWechatPay">
-        <view slot="title" style="display:flex">
-          <image style="width:50rpx;height:50rpx" src="../../images/wechat.jpg"></image>
-          <view class="van-cell-text" style="margin-left:30rpx">微信</view>
-        </view>
-        <van-radio slot="right-icon" name="2" />
-      </van-cell>
-    </van-cell-group>
+      <van-cell-group>
+        <van-cell clickable data-name="2" bind:click="selectWechatPay">
+          <view slot="title" style="" class="pay-item-left">
+            <image style="" src="../../images/wechat.jpg"></image>
+            <view class="van-cell-text" style="">微信</view>
+          </view>
+          <van-radio slot="right-icon" name="2" />
+        </van-cell>
+      </van-cell-group>
     </van-radio-group>
   </view>
-  <van-submit-bar
-    button-text="立即购买"
-    bind:submit="buyCard"
-    loading="{{loading}}"
-  >
-  <view style="display:flex;width:60vw;float:left">
-      <view style="font-size:36rpx;font-weight:bold">
+  <van-submit-bar button-text="立即购买" bind:submit="buyCard" loading="{{loading}}">
+    <view style="" class="purchase-bottom">
+      <view style="" class="purchase-bottom-left1">
         合计：
       </view>
-      <view style="color:#ee0a24;font-size:36rpx;line-height:56rpx">
+      <view style="" class="purchase-bottom-left2">
         {{price}}元
-      </view>  
+      </view>
     </view>
   </van-submit-bar>
-  <!-- <view style="position:absolute;bottom:0;display:flex;line-height:80rpx">
-    <view style="width:51vw;display:flex">
-      <view style="font-size:42rpx;font-weight:bold">
-        合计：
-      </view>
-      <view>
-        {{price}}元
-      </view>  
-    </view>
-    <view>
-      <van-button color="#FFAD2A" bindtap="buyCard">立即购买</van-button>
-    </view>
-  </view> -->
 </view>

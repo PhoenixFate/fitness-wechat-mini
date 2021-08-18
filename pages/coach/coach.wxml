@@ -1,39 +1,40 @@
 <view>
-  <view style="display: flex;padding: 26rpx;font-size: 36rpx;border-bottom:1px solid #d1d1d6">
-    <view>
-      <image style="width: 120rpx;height: 120rpx;border-radius: 50%;" src="{{coachInfo.avatar}}"></image>
+  <view  class="coach-info">
+    <view class="coach-avatar">
+      <image  src="{{coachInfo.avatar}}"></image>
     </view>
-    <view style="margin-left: 30rpx;">
+    <view  class="coach-name">
       <view>{{coachInfo.coachName}}</view>
-      <view>{{coachInfo.mobile}}</view>
     </view>
     <view>
-      <view style="padding:10rpx;border: 1px solid #d1d1d6;margin-left: 150rpx; border-radius:20rpx; font-size:30rpx;margin-top:20rpx" bindtap="toCoachList">更换教练</view>
+      <view  bindtap="toCoachList" class="change-coach">更换教练</view>
     </view>
   </view>
   <view>
     <van-grid column-num="7" border="{{ false }}">
-    <van-grid-item use-slot wx:for="{{ weekArr }}" wx:for-item="item" wx:key="key">
-      <view wx:if="{{item.key == activeIndex}}" class="date-active">
-        <view class="weekday">{{item.weekDay}}</view>
-        <view class="day">{{item.date}}</view>
-        <view>.</view>
-      </view>
-      <view class="date-default" wx:else bindtap="changeDate" data-detail="{{item}}">
-        <view class="weekday">{{item.weekDay}}</view>
-        <view class="day">{{item.date}}</view>
-        <view>.</view>
-      </view>
-    </van-grid-item>
-</van-grid>
+      <van-grid-item use-slot wx:for="{{ weekArr }}" wx:for-item="item" wx:key="key">
+        <view wx:if="{{item.key == activeIndex}}" class="date-active">
+          <view class="weekday">{{item.weekDay}}</view>
+          <view class="day">{{item.date}}</view>
+          <view>.</view>
+        </view>
+        <view class="date-default" wx:else bindtap="changeDate" data-detail="{{item}}">
+          <view class="weekday">{{item.weekDay}}</view>
+          <view class="day">{{item.date}}</view>
+          <view>.</view>
+        </view>
+      </van-grid-item>
+    </van-grid>
   </view>
-  <view style="padding: 30rpx">
-    <view style="font-size: 36rpx;font-weight: bold">当日安排</view>
-    <view style="width: 85%;display: flex;margin-top: 30rpx;background-color:#f2f4f9;padding: 40rpx 48rpx;border-radius: 20rpx;font-size: 32rpx;color:#ABACB4">
+  <view  class="coach-arrange">
+    <view  class="title">当日安排</view>
+    <view
+       class="arranged">
       <view style="width: 80%">10:00 ~ 11:00</view>
       <view>已预订</view>
     </view>
-    <view style="width: 85%;display: flex;margin-top: 30rpx;padding: 40rpx 48rpx;border-radius: 20rpx;font-size: 32rpx;border: 1px solid #d1d1d6" wx:for="{{dayPlan}}" wx:for-item="item" wx:key="classId">
+    <view
+      wx:for="{{dayPlan}}" wx:for-item="item" wx:key="classId" class="to-arrange">
       <view style="width: 60%">{{item.startTime}} ~ {{item.endTime}}</view>
       <view>{{item.classInfo.className}}</view>
       <view style="line-height: 64rpx">

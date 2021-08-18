@@ -19,6 +19,20 @@ export const wx_login = () => new Promise((resolve, reject) => {
  *
  * @returns {Promise<unknown>}
  */
+export const wx_getUserInfo = () => new Promise((resolve, reject) => {
+  return wx.getUserInfo({
+    success(res) {
+      resolve(res)
+    },
+    fail(res) {
+      reject(res)
+    }
+  })
+})
+/**
+ *
+ * @returns {Promise<unknown>}
+ */
 export const wx_getSetting = () => new Promise((resolve, reject) => {
   return wx.getSetting({
     success(res) {
@@ -30,20 +44,6 @@ export const wx_getSetting = () => new Promise((resolve, reject) => {
   })
 })
 
-/**
- *
- * @returns {Promise<unknown>}
- */
-export const wx_getUserInfo = () => new Promise((resolve, reject) => {
-  return wx.getUserInfo({
-    success(res) {
-      resolve(res)
-    },
-    fail(res) {
-      reject(res)
-    }
-  })
-})
 /**
  *
  * @param param

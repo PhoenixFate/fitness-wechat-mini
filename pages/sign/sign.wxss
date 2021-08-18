@@ -1,1 +1,7 @@
 /* pages/sign/sign.wxss */
+canvas {
+  width: 200px;
+  height: 200px;
+  margin-left: 25%;
+  margin-top: 300rpx;
+}

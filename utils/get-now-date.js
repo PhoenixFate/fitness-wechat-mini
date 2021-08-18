@@ -1,6 +1,6 @@
 export default function getNowFormatDate() {
-  const date = new Date()
   const seperator1 = '-'
+  const date = new Date()
   const year = date.getFullYear()
   let month = date.getMonth() + 1
   let strDate = date.getDate()

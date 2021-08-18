@@ -10,8 +10,8 @@ export const handlePlanAfterApi = (data) => {
     const customerPlanWeeksArr = Array.prototype.concat.apply([], customerPlanWeeks)
     const customerPlanDays = customerPlanWeeksArr.map(item => item.customerPlanDays)
     const customerPlanDaysArr = Array.prototype.concat.apply([], customerPlanDays)
-    const donePlanArr = customerPlanDaysArr.filter(item => item.status === 1)
     const undoPlanArr = customerPlanDaysArr.filter(item => item.status === 0)
+    const donePlanArr = customerPlanDaysArr.filter(item => item.status === 1)
     return {
       donePlanArr,
       undoPlanArr,

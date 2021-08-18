@@ -1,1 +1,16 @@
 /* pages/evaluate/evaluate.wxss */
+.van-rate {
+  margin-left: 60rpx;
+  margin-top: 40rpx
+}
+
+.textarea {
+  border: 3rpx solid #ccc;
+  margin-left: 60rpx;
+  margin-top: 20rpx
+}
+
+.text-sure {
+  margin-top: 20rpx;
+  text-align: center
+}

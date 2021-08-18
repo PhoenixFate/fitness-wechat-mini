@@ -1,0 +1,5 @@
+.report-detail-container {
+  width: 100vw;
+  height: 600rpx;
+  margin: 100rpx auto
+}

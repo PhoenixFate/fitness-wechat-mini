@@ -1,11 +1,11 @@
 <!--pages/day-plan/day-plan.wxml-->
-<view style="background-color:#23262D">
-  <view style="padding: 40rpx 40rpx 0rpx 40rpx;">
-    <view style="color: #fff; font-size: 60rpx">{{currentDate}}</view>
-    <view style="color:#FFAD2A;font-size: 60rpx;margin-top:20rpx">{{className}}</view>
-    <view style="color:#fff;font-size:26rpx">在零一量化累计训练了{{totalClass}}天</view>
-    <view style="display: flex;margin-top: 30rpx" wx:if="{{userInfo.gender == '2'}}">
-      <image  style="width:226rpx; height:684rpx;margin-left: 88rpx" src="http://picture.lifting.ren/front-body-woman.png"></image>
+<view style="" class="day-plan-container">
+  <view style="" class="day-plan-top">
+    <view style="" class="current-date">{{currentDate}}</view>
+    <view style="" class="class-name">{{className}}</view>
+    <view style="" class="total-day">在零一量化累计训练了{{totalClass}}天</view>
+    <view style="" wx:if="{{userInfo.gender == '2'}}" class="body-images">
+      <image  style="width:226rpx; height:684rpx;margin-left: 88rpx" src="http://picture.lifting.ren/front-body-woman.png" class="big-image"></image>
       <image style="width:226rpx; height:684rpx;margin-left:108rpx" src="http://picture.lifting.ren/back-body-woman.png"></image>
       <image src="http://picture.lifting.ren/tui.png" style="position:absolute;z-index:10;width:226rpx;margin-top:100rpx;margin-left:86rpx"></image>
       <image src="http://picture.lifting.ren/fuji-woman.png" style="position:absolute;z-index:10;width:226rpx;margin-top:80rpx;margin-left:86rpx"></image>
@@ -60,13 +60,7 @@
           </van-grid-item>
          </van-grid>
         </view>
-      
-       <!-- <view wx:for="{{item.oneSets}}" wx:for-item="set" wx:key="oneSetId" wx:for-index="index">
-         
-        
-      </view> -->
     </view>
   </view>
-  
 </view>
 

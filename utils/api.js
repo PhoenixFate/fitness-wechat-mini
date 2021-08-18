@@ -1,4 +1,6 @@
-import {wx_request} from './promisify-wx-api'
+import {
+  wx_request
+} from './promisify-wx-api'
 import host from '../config/host'
 
 /**
@@ -208,18 +210,6 @@ export const fileUploadMulti = (param) => {
     method: 'POST'
   })
 }
-
-/**
- * 训练辅助-查询某一天训练的详情数据-customerPlanDayId
- * @param param
- * @returns {Promise<*>}
- */
-export const getTrainingAidByCustomerPlanDayId = (param) => {
-  return wx_request({
-    url: `${host}/trainingAid/${param.customerPlanDayId}`,
-  })
-}
-
 /**
  * 获取教练一天安排
  * @param param
@@ -232,6 +222,18 @@ export const getCoachDayPlan = (param) => {
     method: 'POST'
   })
 }
+/**
+ * 训练辅助-查询某一天训练的详情数据-customerPlanDayId
+ * @param param
+ * @returns {Promise<*>}
+ */
+export const getTrainingAidByCustomerPlanDayId = (param) => {
+  return wx_request({
+    url: `${host}/trainingAid/${param.customerPlanDayId}`,
+  })
+}
+
+
 
 /**
  * 获取体测数据
@@ -243,6 +245,18 @@ export const getBodyTest = (param) => {
     url: `${host}/customer/bodyTest`,
     data: param,
     method: 'POST'
+  })
+}
+
+
+/**
+ * 获取所有会员卡类型
+ * @param param
+ * @returns {Promise<*>}
+ */
+export const getAvailableCard = (param) => {
+  return wx_request({
+    url: `${host}/vipCard?page=1&limit=10`,
   })
 }
 
@@ -259,16 +273,6 @@ export const changeCoach = (param) => {
   })
 }
 
-/**
- * 获取所有会员卡类型
- * @param param
- * @returns {Promise<*>}
- */
-export const getAvailableCard = (param) => {
-  return wx_request({
-    url: `${host}/vipCard?page=1&limit=10`,
-  })
-}
 
 /**
  * 小程序预下单

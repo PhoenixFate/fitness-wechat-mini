@@ -1,11 +1,11 @@
 <!--pages/evaluate/evaluate.wxml-->
 <view>
-  <van-rate value="{{ value }}" bind:change="changeRate" style="margin-left: 60rpx;margin-top:40rpx"/>
-  <textarea value="{{comment}}" style="border: 3rpx solid #ccc; margin-left: 60rpx;margin-top:20rpx">
+  <van-rate value="{{ value }}" bind:change="changeRate" />
+  <textarea value="{{comment}}" >
   </textarea>
   <view>
-    <view style="margin-top:20rpx;text-align:center">确认该课程已结束？</view>
-    <view style="margin-top:20rpx;text-align:center">
+    <view  class="text-sure">确认该课程已结束？</view>
+    <view  class="text-sure">
       <van-button round color="#42485D" bindtap="confirmCourse">确认</van-button>
     </view>
   </view>

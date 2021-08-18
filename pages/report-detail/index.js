@@ -32,12 +32,6 @@ function initChart(canvas, width, height, dpr) {
       }
     },
     toolbox: {
-      // feature: {
-      //   dataView: {show: true, readOnly: false},
-      //   magicType: {show: true, type: ['line', 'bar']},
-      //   restore: {show: true},
-      //   saveAsImage: {show: true}
-      // }
     },
     legend: {
       data: renderData.legendData
