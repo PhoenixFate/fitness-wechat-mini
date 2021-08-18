@@ -1,0 +1,36 @@
+<!--pages/meal-list/list.wxml-->
+<view style="display:flex">
+  <van-sidebar active-key="{{ activeKey }}" bind:change="selectMeal">
+    <block wx:for="{{list}}" wx:for-item="item" wx:key="healthyMealId">
+      <van-sidebar-item title="{{item.healthyMealName}}" />
+    </block>
+  </van-sidebar>
+  <view>
+    <image src="{{selectedItem.healthyMealCoverImage}}"></image>
+    <view style="margin-left:50rpx;padding:5rpx">
+        <text style="font-weight:bold;font-size:36rpx">热量：</text>
+        {{selectedItem.hot}}千焦
+    </view>
+    <view style="margin-left:50rpx;padding:5rpx">
+      <text style="font-weight:bold;font-size:36rpx">蛋白质：</text>
+    {{selectedItem.protein}}克</view>
+    <view style="margin-left:50rpx;padding:5rpx">
+      <text style="font-weight:bold;font-size:36rpx">脂肪：</text>
+    {{selectedItem.fat}}克
+    </view>
+    <view style="margin-left:50rpx;padding:5rpx">
+      <text style="font-weight:bold;font-size:36rpx">碳水化合物：</text>
+    {{selectedItem.carbon}}克</view>
+    <view>
+      <van-divider contentPosition="center">健身餐食材</van-divider>
+    </view>
+    <view>
+      <view class="meal-item" wx:for="{{selectedItem.healthyMealItems}}" wx:for-item="item" wx:key="healthyMealItemId">
+        <view>{{item.healthyMealItemName}}</view>
+        <view style="margin-left:50rpx">{{item.weight}} 克</view>
+        <view style="margin-left:50rpx">{{item.share}} 份</view>
+    </view>
+  </view>
+  </view>
+</view>
+

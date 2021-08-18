@@ -1,0 +1,11 @@
+<view>
+  <textarea
+    placeholder="此刻的想法" class="textarea-class"
+  />
+  <view style="margin:20rpx">
+    <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead"/>
+  </view>
+  <view style="text-align:center">
+    <van-button type="primary">发布</van-button>
+  </view>
+</view>

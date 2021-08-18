@@ -1,0 +1,15 @@
+<view>
+  <van-cell-group>
+    <van-cell title="头像" title-style="height:100rpx;line-height:120rpx">
+      <view slot="right-icon">
+        <image style="width:100rpx;height:100rpx" src="{{userInfo.avatar}}"></image>
+      </view>
+    </van-cell>
+    <van-cell title="姓名" value="{{userInfo.name}}" />
+    <van-cell title="昵称" value="{{userInfo.nickname}}" />
+    <van-cell title="性别" value="{{userInfo.gender}}" />
+    <van-cell title="城市" value="{{userInfo.city}}" />
+    <van-cell title="手机" value="{{userInfo.mobile}}" />
+    <van-cell title="生日" value="{{userInfo.birthday}}" />
+  </van-cell-group>
+</view>

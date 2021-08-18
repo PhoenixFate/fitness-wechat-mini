@@ -1,0 +1,12 @@
+<view class="">
+  <view class="account">
+   <view class="item-label">账号</view>
+    <input
+      class="phone-input"
+      value="{{accountNum}}"
+      placeholder="请输入手机号码或者会员号"
+      bind:input="bindKeyInput"
+    />
+  </view>
+  <button bind:tap="getUserInfo">完成</button>
+</view>

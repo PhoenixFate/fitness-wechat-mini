@@ -1,0 +1,18 @@
+<view class="login-container">
+  <image src="../../static/logo-black.jpg" style="" class="authorize-image"/>
+  <view wx:if="{{showFlag}}" class="userinfo">
+    <label>
+      <view
+        class="button-common {{step === 1 ?'background-able':'background-disable'}}"
+        class="authorize-wechat"
+        bindtap="getUserProfile"
+      >微信授权登录
+      </view>
+    </label>    
+    <label>
+      <view class="button-common {{step === 2 ?'background-able':'background-disable'}}">微信手机号快速登录</view>
+      <button wx:if="{{step === 2 }}" open-type="getPhoneNumber" style="display: none" bind:getphonenumber="getPhoneNumber"/>
+    </label>
+    <view wx:if="{{step === 2 }}" class="other-login-button" bind:tap="goCustomLoginPage">其他手机号或者会员号登录</view>
+  </view>
+</view>

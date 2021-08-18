@@ -1,0 +1,112 @@
+.mine-meal-main {
+  position: fixed;
+  bottom: 20rpx;
+  right: 20rpx;
+}
+.mine-meal-main .mine-meal-item {
+  border: 1rpx solid #333333;
+  border-radius: 100rpx;
+  height: 100rpx;
+  width: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.good-item {
+  margin: 20rpx 20rpx 0 20rpx;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+  position: relative;
+  border: 1rpx solid #333333;
+  font-size: 20rpx;
+  padding: 20rpx;
+  display: flex;
+}
+.good-item-img {
+  background-color: #999999;
+  height: 160rpx;
+  width: 160rpx;
+  margin-right: 20rpx;
+}
+.cart-bar {
+  background-color: #f51f0f;
+}
+.good-item-total {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100rpx;
+  position: relative;
+  z-index: 100;
+  background: #ffffff;
+  top: -40rpx;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.shopping {
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+}
+.good-detail {
+  width: 80vw;
+  padding: 20rpx;
+  text-align: center;
+}
+.button-area {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20rpx;
+}
+.meal-img {
+  width: 200rpx;
+  height: 200rpx;
+}
+.good-item-view-detail {
+  margin-top: 20rpx;
+}
+.think {
+  width: 220rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80rpx;
+  color: #999999;
+}
+.buy {
+  width: 220rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80rpx;
+  color: #ffffff;
+  background: #f5222d;
+  border-radius: 20rpx;
+}
+.has-select-meal-content {
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: 80rpx;
+  border-radius: 10rpx;
+  padding-bottom: 20rpx;
+}
+.has-select-meal-item {
+  min-height: 100rpx;
+  margin: 20rpx;
+  width: 710rpx;
+  border: 1rpx solid #999999;
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+}
+.has-select-meal-item-img {
+  height: 100rpx;
+  width: 100rpx;
+  background: #999999;
+  margin: 0 20rpx;
+}

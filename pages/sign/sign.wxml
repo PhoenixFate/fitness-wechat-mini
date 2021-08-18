@@ -1,0 +1,2 @@
+<!--pages/sign/sign.wxml-->
+<canvas style="width: 200px; height: 200px;margin-left:25%;margin-top:300rpx;" canvas-id="myQrcode"></canvas>

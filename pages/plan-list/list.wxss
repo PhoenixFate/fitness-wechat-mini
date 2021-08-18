@@ -1,0 +1,32 @@
+/* pages/plan-list/list.wxss */
+.common-exercise{
+  background-color: #fdf0db;
+  color:#f8ce8c;
+  padding:8rpx 12rpx;
+  margin-left: 10rpx;
+  font-size:24rpx;
+  border-radius: 8rpx;
+}
+
+.super-exercise{
+  background-color: #fadee0;
+  color:#ed6f74;
+  padding:8rpx 12rpx;
+  margin-left: 10rpx;
+  font-size:24rpx;
+  border-radius: 8rpx;
+}
+
+.reduce-exercise{
+  background-color: #d4fee7;
+  color:#5fc19f;
+  padding:8rpx 12rpx;
+  margin-left: 10rpx;
+  font-size:24rpx;
+  border-radius: 8rpx;
+}
+
+.icon-finished{
+  margin-left: 30rpx;
+  width: 75rpx;
+}

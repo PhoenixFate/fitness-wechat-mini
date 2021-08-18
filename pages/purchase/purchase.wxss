@@ -1,0 +1,63 @@
+/* pages/purchase/purchase.wxss */
+.card-main{
+  width:600rpx;
+  height:320rpx;
+  border-radius:30rpx;
+  margin: 0 auto;
+}
+
+.card-vip{
+  font-size: 100rpx;
+  font-weight: 500;
+  color: #eebb76;
+  font-style: italic;
+}
+
+.card-title{
+  line-height: 100rpx;
+  color: #eebb76;
+  margin-left:50rpx;
+  width: 52vw;
+}
+
+.card-day{
+  line-height: 100rpx;
+  color: #eebb76;
+  margin-left: 40rpx;
+}
+
+.card-type-0{
+  background-color:#1976d2;
+}
+
+.card-type-1{
+  background-color:#26a69a;
+}
+
+.card-type-2{
+  background-color:#9c27b0;
+}
+
+.card-type-3{
+  background-color:#21ba45;
+}
+
+.card-type-4{
+  background-color:#c10015;
+}
+
+.card-type-5{
+  background-color:#31ccec;
+}
+
+.card-type-6{
+  background-color:#cad1d8;
+}
+
+.card-type-7{
+  background-color:#23262d;
+}
+
+.card-type-8{
+  background-color:#b69487;
+}

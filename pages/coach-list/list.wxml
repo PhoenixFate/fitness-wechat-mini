@@ -1,0 +1,101 @@
+<!--pages/coach-list/list.wxml-->
+<view style="background-color:#23262c;">
+  <swiper style="height:380rpx !important" current = "{{currentIndex}}" bindchange="swipeCoach">
+    <swiper-item wx:for="{{coachList}}" wx:for-item="item" wx:key="coachId">
+      <view>
+        <image src="../../images/coach-back.png" style="margin-top:40rpx;margin-left:25rpx;width:700rpx;height:344rpx"></image>
+        <view style="color:#fff;margin-top:-330rpx;margin-left:80rpx;display:flex">
+          <view style="width:380rpx">
+            <view style="font-size:52rpx">{{item.coachName}}</view>
+            <view style="margin-top:20rpx">高级增肌教练</view>
+            <view>高级减脂教练</view>
+            <view wx:if="{{item.coachId == 57}}">拳击 散打</view>
+            <view wx:if="{{item.coachId == 54}}">臀腿训练 力量训练</view>
+            <view wx:if="{{item.coachId == 52}}">饮食营养 力量训练</view>
+            <view wx:if="{{item.coachId == 49}}">臀腿训练 力量训练</view>
+            <view wx:if="{{item.coachId == 50}}">臀腿训练 饮食营养</view>
+            <view wx:if="{{item.coachId == 51}}">体态调整 饮食营养</view>
+          </view>
+          <view style="margin-top:42rpx">
+            <image src="{{item.avatar}}" style="width:200rpx;height:200rpx;border-radius:30%"></image>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+  
+  
+  <view style="color: #fff; font-weight: bold;margin-top:100rpx;margin-left:40rpx">训练方向</view>
+    <view style="display:flex;color:#fff;margin-top:40rpx">
+          <view style="margin-left: 60rpx">
+            <view style="background-color:#393F4D;padding:12rpx;border-radius:16rpx">
+              <image src="../../images/reducefat.png" style="width:72rpx;height:72rpx"></image>
+            </view>
+            <view style="font-size:24rpx;text-align:center">减脂</view>
+          </view>
+          <view style="margin-left: 80rpx">
+            <view style="background-color:#393F4D;padding:12rpx;border-radius:16rpx">
+              <image src="../../images/crossfit.png" style="width:72rpx;height:72rpx"></image>
+            </view>
+            <view style="font-size:24rpx;text-align:center">增肌</view>
+          </view>
+          <view style="margin-left: 80rpx">
+            <view style="background-color:#393F4D;padding:12rpx;border-radius:16rpx">
+              <image src="../../images/strength.png" style="width:72rpx;height:72rpx"></image>
+            </view>
+            <view style="font-size:24rpx;text-align:center">力量</view>
+          </view>
+          <view style="margin-left: 80rpx">
+            <view style="background-color:#393F4D;padding:12rpx;border-radius:16rpx">
+              <image src="../../images/recover.png" style="width:72rpx;height:72rpx"></image>
+            </view>
+            <view style="font-size:24rpx;text-align:center">恢复</view>
+          </view>
+        </view>
+    <view style="color: #fff; font-weight: bold;margin-top:100rpx;margin-left:40rpx">为什么选他?</view>
+    <view class="coach-detail" wx:if="{{currentCoach.coachId == 51}}">
+      <view>cbba高级私人教练</view>
+      <view style="margin-top:74rpx">国家职业资格高级认证</view>
+      <view style="margin-top:74rpx">nsca-cpt认证</view>
+      <view style="margin-top:74rpx">2017年cbba全国赛健体c组冠军</view>
+    </view>
+    <view class="coach-detail" wx:elif="{{currentCoach.coachId == 54}}">
+      <view>IBFA体重管理营养师认证</view>
+      <view style="margin-top:74rpx">2021北京奥赛比基尼组别及全场冠军</view>
+      <view style="margin-top:74rpx">2021DMS冠军杯金华站比基尼组别及全场冠军</view>
+      <view style="margin-top:74rpx">2020DMS冠军杯常州站比基尼冠军</view>
+    </view>
+    <view class="coach-detail" wx:elif="{{currentCoach.coachId == 52}}">
+      <view>国家职业私人教练高级认证</view>
+      <view style="margin-top:74rpx">诺亚第运动康复认证</view>
+      <view style="margin-top:74rpx">2020DMS冠军杯常州站男子健体冠军</view>
+      <view style="margin-top:74rpx">2020费恩莱斯超级联赛青年组男子健体冠军及全场冠军</view>
+    </view>
+    <view class="coach-detail" wx:elif="{{currentCoach.coachId == 49}}">
+      <view>国家体育总局一级社会体育指导员</view>
+      <view style="margin-top:74rpx">运动营养师导师，国家健身营养师导师</view>
+      <view style="margin-top:74rpx">亚洲形体健身学院培训导师</view>
+    </view>
+    <view class="coach-detail" wx:elif="{{currentCoach.coachId == 50}}">
+      <view>ipta国际私人教练认证</view>
+      <view style="margin-top:74rpx">2020cubfa 古典健美冠军</view>
+      <view style="margin-top:74rpx">全国公开赛扬州站古典健美第五名</view>
+      <view style="margin-top:74rpx">”燕山之巅“传统健美第四名</view>
+    </view>
+    <view class="coach-detail" wx:elif="{{currentCoach.coachId == 57}}">
+      <view>国家职业资格</view>
+      <view style="margin-top:74rpx">江苏省一线体育指导员</view>
+      <view style="margin-top:74rpx">nsca-cpt认证</view>
+    </view>
+    <view class="coach-detail" wx:else>
+      <view>国家体育总局一级社会体育指导员</view>
+      <view style="margin-top:74rpx">运动营养师导师，国家健身营养师导师</view>
+      <view style="margin-top:74rpx">亚洲形体健身学院培训导师</view>
+      <view style="margin-top:74rpx">曾赴国外学习和深造，在挪威学习先进的针对</view>
+    </view>
+    <view style="text-align:center;margin-top:40rpx;padding-bottom:20rpx">
+      <van-button color="#42485D" round bindtap="changeCoachRequest">确定</van-button>
+    </view>
+    
+
+</view>

@@ -1,0 +1,25 @@
+/* pages/day-plan/day-plan.wxss */
+.content-main{
+  border-top: 0.5px solid #e3b26b;
+  border-top-left-radius: 48rpx;
+  border-top-right-radius: 48rpx;
+  padding: 60rpx 40rpx;
+  background: #F6F7FA;
+}
+
+.content-title-common{
+  background-color: rgba(255, 173, 42, 0.1);
+  color: #f4b451;
+  padding:14rpx 32rpx;
+}
+.content-title-super{
+  background-color: rgba(255, 87, 100, 0.1);
+  color: #FF5764;
+  padding:14rpx 32rpx;
+}
+
+.content-title-reduce{
+  background-color: rgba(7, 193, 135, 0.1);
+  color: #07C187;
+  padding:14rpx 32rpx;
+}

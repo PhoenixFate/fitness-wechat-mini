@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-empty": "@vant/weapp/empty/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-calendar": "@vant/weapp/calendar/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-progress": "@vant/weapp/progress/index"
+  },
+  "navigationBarTitleText": "我的课表"
+}

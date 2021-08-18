@@ -1,0 +1,20 @@
+<!-- index.wxml -->
+<view class="containe1">
+  <view class="top">
+    <view class="title">
+      <image src="{{img_my_report}}"/>
+      <view></view>
+      <text>我的报告</text>
+    </view>
+    <view wx:for="{{reportList}}" class="report_list">
+      <view class="re_title">体测报告</view>
+      <view class="desc">
+        <text>时间：{{item.time}}</text>
+        <text>阶段：{{item.desc}}</text>
+      </view>
+      <view class="icon_right">我的</view>
+    </view>
+  </view>
+  <!-- <view class="chart_title">体型变化动态图</view>
+  <view class="chart_contain"></view> -->
+</view>

@@ -1,0 +1,9 @@
+/* pages/meal-list/list.wxss */
+.meal-item{
+  display: flex;
+  padding: 20rpx;
+  border: 0.8px solid #e2b26b;
+  border-radius: 30rpx;
+  width: 70vw;
+  margin-top: 20rpx;
+}

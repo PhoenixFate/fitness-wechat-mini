@@ -1,0 +1,17 @@
+<!-- index.wxml -->
+<view class="container">
+  <view class="title">
+    <image src="{{img_my_coach}}" />
+    <view></view>
+    <text>我的教练</text>
+  </view>
+  <view wx:for="{{cocahList}}" wx:key="index" class="cocah_list">
+    <image src="{{item.img}}" />
+    <view class="desc">
+      <text>姓名：{{item.name}}</text>
+      <text>擅长：{{item.goodat}}</text>
+      <text>简介：{{item.desc}}</text>
+    </view>
+    <view class="icon_right">我的</view>
+  </view>
+</view>

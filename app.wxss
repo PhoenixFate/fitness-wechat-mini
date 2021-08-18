@@ -1,0 +1,23 @@
+/**app.wxss**/
+page {
+  /* height: 100vh; */
+  position: relative;
+}
+
+.container {
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.empty-class {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}

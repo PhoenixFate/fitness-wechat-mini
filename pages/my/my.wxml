@@ -1,0 +1,86 @@
+<!--index.wxml-->
+<view style="" class="mine-container">
+  <view>
+    <van-cell bindtap="viewUserInfo">
+      <view slot="title" class="customer-info">
+        <image wx:if="{{userInfo.avatar}}" src="{{userInfo.avatar}}"></image>
+        <image wx:if="{{!userInfo.avatar}}" src="/static/empty-avatar.png"></image>
+        <view style="" class="customer-info-detail">
+          <view style="" class="customer-name">{{userInfo.nickname}}</view>
+          <view style="" class="customer-end-date">
+            {{endDateDesc}}
+          </view>
+        </view>
+      </view>
+      <van-icon slot="right-icon" name="arrow" />
+    </van-cell>
+  </view>
+  <view class="card-background">
+    <image src="/static/background-card.png" style=""></image>
+  </view>
+  <view style="" bindtap="purchaseCard" class="purchase-card">
+    <view style="" class="card-name1">
+      <image src="../../images/card-vip.png" style=""></image>
+      <view style="">量化卡</view>
+    </view>
+    <view style="" class="card-name2">零一量化（奥体名座店）</view>
+    <view style="" class="card-name3">立即续费</view>
+  </view>
+  <view style="" class="plan-info">
+    <view style="" class="plan-info-left" bindtap="toPlanList">
+      <view>
+        {{planName}}
+      </view>
+      <view style="margin-top:10rpx">
+        <progress percent="{{progressPercent}}" border-radius="8" color="#f4ae3b" show-info stroke-width="16" />
+      </view>
+      <view style="display: flex; margin-top: 20rpx">
+        <view style="width: 80%">训练日程</view>
+        <van-icon name="arrow"></van-icon>
+      </view>
+    </view>
+    <view style=""
+      bindtap="toMyCoach" class="plan-info-right">
+      <view>
+        {{coachInfo.coachName}}
+      </view>
+      <view style="" class="plan-time">
+        {{planTime}}
+      </view>
+      <view style="" class="my-coach">
+        <view>我的教练</view>
+        <van-icon name="arrow"></van-icon>
+      </view>
+    </view>
+  </view>
+  <view class="mine-function">
+    <van-grid clickable column-num="3" custom-class="grid-group">
+      <van-grid-item use-slot bindtap="viewBodyInfo">
+        <view class="function-item">
+          <image src="/static/data.png"></image>
+          <view>体测数据</view>
+        </view>
+      </van-grid-item>
+      <van-grid-item use-slot bindtap="viewMealInfo">
+        <view class="function-item">
+          <image src="/static/food.png"></image>
+          <view>推荐摄入</view>
+        </view>
+      </van-grid-item>
+      <van-grid-item use-slot bindtap="toPlanList">
+        <view class="function-item">
+          <image src="/static/plan.png"></image>
+          <view>我的计划</view>
+        </view>
+      </van-grid-item>
+    </van-grid>
+  </view>
+  <view style="margin-top: 10rpx">
+    <van-cell-group>
+      <van-cell title="问题反馈" is-link border="{{ false }}" />
+      <van-cell title="关于我们" is-link border="{{ false }}" />
+      <van-cell url="/pages/sign/sign" title="课程签到" is-link border="{{ false }}" />
+      <van-cell url="/pages/my-settings/settings" title="更多设置" is-link border="{{ false }}" />
+    </van-cell-group>
+  </view>
+</view>

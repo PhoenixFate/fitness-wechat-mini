@@ -1,0 +1,10 @@
+<view id="body-container">
+    <van-cell-group>
+      <van-cell title="体重" value="{{bodyInfo.weight ? bodyInfo.weight:''}}kg"  />
+      <van-cell title="体脂率" value="{{bodyInfo.bodyFat ? bodyInfo.bodyFat:''}}%" />
+      <van-cell title="BMI" value="{{bodyInfo.bmi ? bodyInfo.bmi : ''}}kg/m2"  />
+      <van-cell title="静态心率" value="{{bodyInfo.staticHeartRate ? bodyInfo.staticHeartRate: ''}}次/分钟" />
+      <van-cell title="基础代谢率" value="{{bodyInfo.bmr}}kCal" />
+    </van-cell-group>
+    <image src="../../images/body-background.png" class="background-image"></image>
+  </view>

@@ -1,0 +1,7 @@
+.textarea-class {
+  /*background: #f3f3f3;*/
+  width: 670rpx;
+  height: 500rpx;
+  margin: 20rpx auto;
+  padding: 10rpx;
+}

@@ -1,0 +1,54 @@
+<wxs src="../../c-wxs/reportTool.wxs" module="reportTool"/>
+
+<view class="container-report">
+  <view class="user-info">
+    <view>
+      <van-image
+        round
+        fit="cover"
+        width="150rpx"
+        height="150rpx"
+        src="{{userInfo.avatar}}"
+      />
+      <view style="text-align:center">{{userInfo.nickname}}</view>
+      <view>{{currentDonePlan.detailDate}}</view>
+    </view>
+  </view>
+  <view class="class-info">
+    <view>{{currentDonePlan.classInfo.className}}</view>
+    <view></view>
+  </view>
+
+  <view wx:for="{{exerciseList}}" wx:key="exerciseId" wx:for-item="exerciseListItem" class="exercise-list">
+    <view
+      class="action-sets"
+      bind:tap="viewItemDetail"
+      wx:for="{{exerciseListItem.actionSets}}"
+      wx:for-item="actionSetItem"
+      wx:key="actionSetCustomerId"
+      data-id="{{actionSetItem.actionSetCustomerId}}"
+    >
+      <view
+        class="movement-list"
+        wx:for="{{actionSetItem.actions}}"
+        wx:for-item="movementListItem"
+        wx:key="id"
+      >
+        <view class="action-name">{{movementListItem.actionName}}</view>
+        <view
+          wx:for="{{movementListItem.oneSets}}"
+          wx:for-item="movementClassDetailsItem"
+          wx:key="id"
+        >
+          <view style="margin-left:20rpx">
+            {{movementClassDetailsItem.realWeight}}
+            <text style="font-size:20rpx;color:#999999">kg</text>
+            <text style="margin:0 10rpx">*</text>
+            {{movementClassDetailsItem.realCount}}
+            <text style="font-size:20rpx;color:#999999">次</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

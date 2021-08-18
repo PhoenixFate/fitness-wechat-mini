@@ -1,0 +1,29 @@
+<view class="container">
+  <ec-canvas id="mychart-dom-multi-bar" canvas-id="mychart-multi-bar" ec="{{ ecBar }}"></ec-canvas>
+  <view class="classify">
+    <image class="icon_left" src="../../images/icon-arrow.png" bindtap="handleLeft"></image>
+    <view class="class_item {{ curClass === 1 ? 'class_selected' : '' }}">体脂率</view>
+    <view class="class_item {{ curClass === 2 ? 'class_selected' : '' }}">体重</view>
+    <view class="class_item {{ curClass === 3 ? 'class_selected' : '' }}">维度</view>
+    <image class="icon_right" src="../../images/icon-arrow.png" bindtap="handleRight"></image>
+  </view>
+  <view class="course_plan">
+    <view wx:for="{{planCourse}}" wx:key="index" class="course_status {{ item.status ? 'course_done' : '' }}"></view>
+  </view>
+  <view class="course_desc">本次计划10/50课时</view>
+  <view class="daily_train">当日训练</view>
+  <view class="train_content">
+    <view class="train_title">当日报告</view>
+    <view class="train_detail1" wx:for="{{trainDetail}}" wx:key="index">{{item}}</view>
+  </view>
+  <view class="train_bottom">
+    课程确认
+    <image wx:for="{{starNum}}" wx:key="index" class="icon_star" src="{{item}}" data-index="{{index}}" bindtap="handleClickStar"></image>
+  </view>
+  <view class="daily_train">餐饮推荐</view>
+  <view>
+    <navigator url="/pages/webView/webView?url=http://www.baidu" hover-class="navigator-hover">
+      跳转到新页面
+    </navigator>
+  </view>
+</view>

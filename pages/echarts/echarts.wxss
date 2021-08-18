@@ -1,0 +1,132 @@
+#mychart-dom-multi-bar {
+  position: absolute;
+  top: 0;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+}
+
+#mychart-dom-multi-scatter {
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.container {
+  background: #edeeee;
+}
+.classify {
+  display: flex;
+  margin-top: 450rpx;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon_left {
+  width: 80rpx;
+  height: 80rpx;
+  transform: rotate(180deg);
+}
+
+.icon_right {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.class_item {
+  color: #8e8e8e;
+  width: 150rpx;
+  text-align: center;
+}
+
+.class_selected {
+  color: #ff4d37;
+  border-bottom: 2px solid #ff4d37;
+}
+
+.course_plan {
+  background: white;
+  padding: 10rpx 30rpx;
+  margin: 10rpx 20rpx;
+  border-radius: 20rpx;
+}
+
+.course_status {
+  width: 49rpx;
+  height: 14rpx;
+  border-radius: 10rpx;
+  margin: 7rpx;
+  border: 1px solid black;
+  display: inline-block;
+}
+
+.course_done {
+  border: none;
+  background: #ff4d37;
+  height: 18rpx;
+  width: 53rpx;
+}
+
+.course_desc {
+  color: #6b6a6a;
+}
+
+.daily_train {
+  width: 100%;
+  margin-left: 65rpx;
+  text-align: left;
+  margin-top: 50rpx;
+}
+
+.train_content {
+  position: relative;
+  background: white;
+  padding: 40rpx 100rpx 50rpx 20rpx;
+  margin: 10rpx 20rpx;
+  border-top-right-radius: 20rpx;
+  border-top-left-radius: 20rpx;
+  width: 585rpx;
+}
+
+.train_title {
+  position: absolute;
+  background: #f46f80;
+  color: white;
+  width: 80rpx;
+  top: 0;
+  right: 0;
+  border-radius: 20rpx;
+  height: 106rpx;
+  line-height: 48rpx;
+  padding-left: 16rpx;
+  padding-top: 13rpx;
+}
+
+.train_detail1 {
+  display: inline-block;
+  margin-right: 30rpx;
+  margin-top: 20rpx;
+  color: #868585;
+}
+
+.train_bottom {
+  color: #868585;
+  width: 702rpx;
+  text-align: center;
+  border-top: 4px dashed #868585;
+  border-bottom-right-radius: 20rpx;
+  border-bottom-left-radius: 20rpx;
+  background: #d7d7d7;
+  height: 65rpx;
+  line-height: 65rpx;
+  margin-top: -7rpx;
+}
+
+.icon_star {
+  width: 60rpx;
+  height: 60rpx;
+  float: right;
+}

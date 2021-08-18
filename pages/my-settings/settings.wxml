@@ -1,0 +1,7 @@
+<!--pages/my-settings/settings.wxml-->
+<view style="background-color:#f8f8f8;padding-bottom:12rpx">
+  <van-cell-group style="margin-top:10rpx">
+    <van-cell title="关于我们" is-link border="{{false}}"/>
+  </van-cell-group>
+  <button style="width:100% !important;margin-top: 12rpx;background-color:#fff !important" bindtap="logout">退出登录</button>
+</view>

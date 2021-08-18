@@ -1,0 +1,72 @@
+<view class="plan">
+  <van-calendar
+    poppable="{{ false }}"
+    show-title="{{false}}"
+    show-confirm="{{ false }}"
+    min-date="{{minDate}}"
+    default-date="{{defaultDate}}"
+    formatter="{{ formatterDate }}"
+    bind:select="onDateSelect"
+    row-height="50"
+    color="#f4af4a"
+    class="calendar"
+  />
+  <view style="" class="plan-progress">
+    <view style="" class="line1">
+      <view style="" class="line1-title-left">
+        计划进度
+      </view>
+      <view>
+        {{progressPercent}}%
+      </view >
+    </view>
+    <view style="" class="line2">
+      <progress percent="{{progressPercent}}" border-radius="10" color="#23262C" stroke-width="20" />
+    </view>
+    <view style="" class="line3">
+      <view style="" class="line3-left">
+        计划锻炼：{{userInfo.totalClass?userInfo.totalClass:0}}天
+      </view>
+      <view style="" class="line3-right">
+        实际锻炼：{{userInfo.currentClass}}天
+      </view>
+    </view>
+  </view>
+  <view style="" class="today-exercise">
+    <view style="" class="title">
+      <view style="" class="title-left">
+        当日训练
+      </view>
+      <view>
+        {{currentDate}}
+      </view >
+    </view>
+    <block wx:if="{{movementListArr.length > 0}}">
+      <view style="" wx:for="{{movementListArr}}" wx:key="id" wx:for-item="item" class="today-exercise-main">
+      <view wx:if="{{item.actionSetType == 'COMMON_SET'}}" class="common-exercise">{{item.actionSetTypeName}}</view>
+      <view wx:if="{{item.actionSetType == 'SUPER_SET'}}" class="super-exercise">{{item.actionSetTypeName}}</view>
+      <view wx:if="{{item.actionSetType == 'REDUCE_SET'}}" class="reduce-exercise">{{item.actionSetTypeName}}</view>
+      <view style="" class="action-name">{{item.actionName}}</view>
+      <view style="" class="">{{item.count}}组</view>
+      <view style="" class="action-weight">{{item.weight ? item.weight + 'kg' : ''}}</view>
+      </view>
+    </block>
+    <view wx:else class="plan-content">
+      <van-empty
+            class="van-empty"
+            image="https://img.yzcdn.cn/vant/custom-empty-image.png"
+            description="暂无计划"
+          />
+    </view>
+  </view>
+  <view style="" class="today-movement">
+    <view style="" class="title">
+      当日集锦
+    </view>
+    <scroll-view scroll-x="true" style="white-space: nowrap">
+      <view wx:for="{{imageUrls}}" wx:for-item="item" wx:for-index="index" wx:key="index" style="display: inline-block">
+        <image style="" class="item-image" src="{{item}}" bindtap="preview" data-src="{{item}}"></image>
+      </view>
+    </scroll-view>
+  </view>
+</view>

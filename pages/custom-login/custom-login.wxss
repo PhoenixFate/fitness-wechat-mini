@@ -1,0 +1,16 @@
+.account {
+  display: flex;
+  margin: 20rpx auto;
+  width: 680rpx;
+  height: 80rpx;
+  align-items: center;
+  border-bottom: 1rpx solid #333333;
+}
+
+.phone-input {
+  width: 80%;
+}
+
+.item-label {
+  width: 20%;
+}

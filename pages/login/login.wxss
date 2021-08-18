@@ -1,0 +1,16 @@
+.login-image {
+  width: 600rpx;
+  height: 552rpx;
+  margin-top: 280rpx;
+  margin-left: 88rpx;
+}
+.login-text {
+  font-size: 32rpx;
+  color: #828386;
+  margin-top: 20rpx;
+  text-align: center;
+}
+.login-main {
+  margin-top: 80rpx;
+  text-align: center;
+}

@@ -1,0 +1,12 @@
+<van-tabs active="{{ active }}" bind:change="onChange">
+  <van-tab title="我的餐食">
+    <view class="mine-meal-main">
+        <view
+          bind:tap="goAddMealPage"
+          class="mine-meal-item"
+        >
+          <van-icon name="plus"/>
+        </view>
+    </view>
+  </van-tab>
+</van-tabs>

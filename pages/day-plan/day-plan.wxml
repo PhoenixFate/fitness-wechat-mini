@@ -1,0 +1,72 @@
+<!--pages/day-plan/day-plan.wxml-->
+<view style="background-color:#23262D">
+  <view style="padding: 40rpx 40rpx 0rpx 40rpx;">
+    <view style="color: #fff; font-size: 60rpx">{{currentDate}}</view>
+    <view style="color:#FFAD2A;font-size: 60rpx;margin-top:20rpx">{{className}}</view>
+    <view style="color:#fff;font-size:26rpx">在零一量化累计训练了{{totalClass}}天</view>
+    <view style="display: flex;margin-top: 30rpx" wx:if="{{userInfo.gender == '2'}}">
+      <image  style="width:226rpx; height:684rpx;margin-left: 88rpx" src="http://picture.lifting.ren/front-body-woman.png"></image>
+      <image style="width:226rpx; height:684rpx;margin-left:108rpx" src="http://picture.lifting.ren/back-body-woman.png"></image>
+      <image src="http://picture.lifting.ren/tui.png" style="position:absolute;z-index:10;width:226rpx;margin-top:100rpx;margin-left:86rpx"></image>
+      <image src="http://picture.lifting.ren/fuji-woman.png" style="position:absolute;z-index:10;width:226rpx;margin-top:80rpx;margin-left:86rpx"></image>
+      <image src="http://picture.lifting.ren/xiaobi-woman.png" style="position:absolute;z-index:10;width:226rpx;margin-top:60rpx;margin-left:86rpx"></image>
+      <image src="http://picture.lifting.ren/dabi-woman.png" style="position:absolute;z-index:10;width:226rpx;margin-top:56rpx;margin-left:86rpx"></image>
+      <image src="http://picture.lifting.ren/bei-woman.png" style="position:absolute;z-index:10;width:226rpx;margin-top:68rpx;margin-left:424rpx"></image>
+      <image src="http://picture.lifting.ren/bei2-woman.png" style="position:absolute;z-index:10;width:226rpx;margin-top:54rpx;margin-left:424rpx"></image>
+      <image src="http://picture.lifting.ren/tun-woman.png" style="position:absolute;z-index:10;width:226rpx;margin-top:100rpx;margin-left:424rpx"></image>
+      <image src="http://picture.lifting.ren/datui-woman-back.png" style="position:absolute;z-index:10;width:226rpx;margin-top:116rpx;margin-left:420rpx"></image>
+      <image src="http://picture.lifting.ren/dabi-woman.png" style="position:absolute;z-index:10;width:226rpx;margin-top:56rpx;margin-left:422rpx"></image>
+      <image src="http://picture.lifting.ren/xiaobi-woman-back.png" style="position:absolute;z-index:10;width:226rpx;margin-top:80rpx;margin-left:422rpx"></image>
+      <image src="http://picture.lifting.ren/xiaotui-woman-back.png" style="position:absolute;z-index:10;width:226rpx;margin-top:140rpx;margin-left:420rpx"></image>
+    </view>
+    <view style="display: flex;margin-top: 30rpx" wx:else>
+      <image src="http://picture.lifting.ren/xiong.png" style="position:absolute;z-index:10;width:226rpx;margin-top:50rpx;margin-left:68rpx"></image>
+      <image src="http://picture.lifting.ren/fuji.png" style="position:absolute;z-index:10;width:226rpx;margin-top:52rpx;margin-left:68rpx"></image>
+      <image src="http://picture.lifting.ren/jian.png" style="position:absolute;z-index:10;width:226rpx;margin-top:30rpx;margin-left:68rpx"></image>
+      <image src="http://picture.lifting.ren/dabi.png" style="position:absolute;z-index:10;width:226rpx;margin-top:36rpx;margin-left:68rpx"></image>
+      <image src="http://picture.lifting.ren/xiaobi.png" style="position:absolute;z-index:10;width:226rpx;margin-top:60rpx;margin-left:68rpx"></image>
+      <image src="http://picture.lifting.ren/datui-man.png" style="position:absolute;z-index:10;width:226rpx;margin-top:110rpx;margin-left:68rpx"></image>
+      <image  style="width:226rpx; height:604rpx;margin-left: 68rpx" src="http://picture.lifting.ren/front-body.png"></image>
+      <image style="width:226rpx; height:684rpx;margin-left:108rpx" src="http://picture.lifting.ren/back-body.png"></image>
+      <image src="http://picture.lifting.ren/bei.png" style="position:absolute;z-index:10;width:226rpx;margin-top:50rpx;margin-left:400rpx"></image>
+      <image src="http://picture.lifting.ren/bei2.png" style="position:absolute;z-index:10;width:226rpx;margin-top:40rpx;margin-left:400rpx"></image>
+      <image src="http://picture.lifting.ren/dabi-back.png" style="position:absolute;z-index:10;width:226rpx;margin-top:50rpx;margin-left:400rpx"></image>
+      <image src="http://picture.lifting.ren/xiaobi-back.png" style="position:absolute;z-index:10;width:226rpx;margin-top:88rpx;margin-left:400rpx"></image>
+      <image src="http://picture.lifting.ren/jian-back.png" style="position:absolute;z-index:10;width:226rpx;margin-top:32rpx;margin-left:400rpx"></image>
+      <image src="http://picture.lifting.ren/tun.png" style="position:absolute;z-index:10;width:226rpx;margin-top:100rpx;margin-left:400rpx"></image>
+      <image src="http://picture.lifting.ren/datui-back.png" style="position:absolute;z-index:10;width:226rpx;margin-top:110rpx;margin-left:400rpx"></image>
+      <image src="http://picture.lifting.ren/xiaotui.png" style="position:absolute;z-index:10;width:226rpx;margin-top:140rpx;margin-left:400rpx"></image>
+    </view>
+    
+  </view>
+  <view class="content-main">
+    <view wx:for="{{actionSetsArr}}" wx:key="actionSetCustomerId" wx:for-item="item">
+      <view wx:for="{{item.actions}}" wx:for-item="action" wx:key="actionId">
+        <view class="content-title-common" wx:if="{{item.actionSetType == 'COMMON_SET'}}">
+          {{action.actionName}}
+        </view>
+        <view class="content-title-super" wx:if="{{item.actionSetType == 'SUPER_SET'}}">
+          {{action.actionName}}
+        </view>
+        <view class="content-title-reduce" wx:if="{{item.actionSetType == 'REDUCE_SET'}}">
+          {{action.actionName}}
+        </view>
+        <van-grid column-num="3" border="{{false}}">
+          <van-grid-item wx:for="{{ action.organizedArr}}" wx:for-item="set" wx:key="oneSetId" wx:for-index="index" use-slot>
+            <view>
+              <text style="font-size:24rpx;color:#ABACB4">{{index+1}}.</text>
+            <text style="margin-left:10rpx;font-size:32rpx">{{set.realCount}} x {{set.realWeight ? set.realWeight : '-'}}kg</text>
+            </view>
+          </van-grid-item>
+         </van-grid>
+        </view>
+      
+       <!-- <view wx:for="{{item.oneSets}}" wx:for-item="set" wx:key="oneSetId" wx:for-index="index">
+         
+        
+      </view> -->
+    </view>
+  </view>
+  
+</view>
+

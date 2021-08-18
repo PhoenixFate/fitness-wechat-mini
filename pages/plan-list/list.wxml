@@ -1,0 +1,31 @@
+<!--pages/plan-list/list.wxml-->
+<view style="padding:40rpx">
+  <block wx:for="{{trainingList}}" wx:for-item="day" wx:key="customerPlanDayId">
+    <view style="background-color: #23262D;color:#FFAD2A;text-align:center;border-radius:16rpx;line-height:100rpx;margin-top:40rpx">{{day.classInfo.className}}</view>
+    <view style="border:0.5px solid #23262D;margin-top:40rpx;border-radius:16rpx">
+    <view style="margin-left:32rpx;line-height:80rpx;display:flex">
+      <view style="font-size:44rpx;">
+        {{day.detailDate}}
+      </view>
+      <view style="font-size:32rpx;margin-left:280rpx;color:#42485D">{{day.status == 1 ? '已完成':'未开始'}}</view>
+    </view>
+    <view style="display: flex;border: 1px solid #ebecef; border-radius:20rpx; font-size:32rpx;padding:15rpx;margin-top: 10rpx;" wx:for="{{day.trainDetail}}" wx:key="id" wx:for-item="item">
+      <view wx:if="{{item.actionSetType == 'COMMON_SET' && !item.isFinished}}" class="common-exercise">{{item.actionSetTypeName}}</view>
+      <view class="icon-finished" wx:if="{{item.actionSetType == 'COMMON_SET' && item.isFinished}}" >
+        <icon type="success" color="#f4af4a"></icon>
+      </view>
+      <view wx:if="{{item.actionSetType == 'SUPER_SET' && !item.isFinished}}" class="super-exercise">{{item.actionSetTypeName}}</view>
+      <view class="icon-finished" wx:if="{{item.actionSetType == 'SUPER_SET' && item.isFinished}}" >
+        <icon type="success" color="#ed6368"></icon>
+      </view>
+      <view wx:if="{{item.actionSetType == 'REDUCE_SET' && !item.isFinished}}" class="reduce-exercise">{{item.actionSetTypeName}}</view>
+      <view class="icon-finished" wx:if="{{item.actionSetType == 'REDUCE_SET' && item.isFinished}}" >
+        <icon type="success" color="#58bd8b"></icon>
+      </view>
+      <view style="margin-left: 40rpx;font-weight: bold;width:220rpx">{{item.actionName}}</view>
+      <view style="margin-left: 30rpx;color:#c2c2c4;width: 100rpx">{{item.count}}组</view>
+      <view style="margin-left: 30rpx">{{item.weight ? item.weight + 'kg' : ''}}</view>
+    </view>
+    </view>
+  </block>
+</view>

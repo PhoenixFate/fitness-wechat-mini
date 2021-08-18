@@ -1,0 +1,10 @@
+#body-container {
+  height: 100vh;
+  position: relative;
+}
+#body-container .background-image {
+  width: 750rpx;
+  height: 340rpx;
+  position: absolute;
+  bottom: 0;
+}

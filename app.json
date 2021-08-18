@@ -1,0 +1,68 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/home/home",
+    "pages/authorize/index",
+    "pages/report/report",
+    "pages/echarts/echarts",
+    "pages/webView/webView",
+    "pages/my-cocah/my-cocah",
+    "pages/my/my",
+    "pages/my-report/my-report",
+    "pages/coach/coach",
+    "pages/coach-list/list",
+    "pages/day-plan/day-plan",
+    "pages/plan-list/list",
+    "pages/my-settings/settings",
+    "pages/body/body",
+    "pages/user-info/user",
+    "pages/purchase/purchase",
+    "pages/meal-list/list",
+    "pages/sign/sign",
+    "pages/evaluate/evaluate",
+    "pages/meal/meal",
+    "pages/plan/plan",
+    "pages/report-detail/index",
+    "pages/add-meal/add-meal",
+    "pages/no-register/no-register",
+    "pages/custom-login/custom-login"
+
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ebb15d",
+    "navigationBarTitleText": "字节健身",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#2c262c",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "color": "#a7a8b0",
+    "list": [
+      {
+        "pagePath": "pages/plan/plan",
+        "text": "课程",
+        "iconPath": "static/icon-class.png",
+        "selectedIconPath": "static/icon-class-selected.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "报告",
+        "iconPath": "static/icon-report.png",
+        "selectedIconPath": "static/icon-report-selected.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "static/icon-my.png",
+        "selectedIconPath": "static/icon-my-selected.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "useExtendedLib": {
+    "weui": true
+  },
+  "sitemapLocation": "sitemap.json"
+}

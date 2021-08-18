@@ -1,0 +1,11 @@
+/* pages/coach-list/list.wxss */
+.coach-detail{
+  padding:48rpx;
+  border-radius:16rpx;
+  background-color:#31353F;
+  font-size:28rpx;
+  color:#fff;
+  margin-top:40rpx;
+  width:80% !important;
+  margin-left:30rpx !important
+}

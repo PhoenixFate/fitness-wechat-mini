@@ -1,0 +1,9 @@
+/.idea/
+miniprogram_npm/
+node_modules/
+.history
+.vscode
+.DS_Store
+*.iml
+target
+classes

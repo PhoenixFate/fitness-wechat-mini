@@ -1,0 +1,72 @@
+<view>
+  <view class="body-global">
+    <view class="body-global-item1">
+      身体总览
+    </view>
+    <view class="body-global-item2">
+      维度跟踪
+    </view>
+  </view>
+  <view class="body-global-image">
+    <image src="../../images/smile.png"></image>
+  </view>
+  <view class="body-weight">
+    {{currentWeight}}
+  </view>
+  <view class="body-weight-period">
+    {{preMonth}}-{{today}} 体重（kg）
+  </view>
+  <view class="container">
+    <ec-canvas type="2d" id="mychart-dom-bar" canvas-id="mychart-multi-bar" ec="{{ ecBar1 }}"></ec-canvas>
+  </view>
+  <view class="body-more">
+    <view class="body-more-main">
+      <image src="../../images/home-body.png"></image>
+      <view class="show-more">查看更多身体数据</view>
+      <image src="../../images/home-next.png" bindtap="viewBodyInfo"></image>
+    </view>
+  </view>
+  <view class="today-exercise">
+    <view class="border1"></view>
+    <view class="today-main">
+      <view class="title">
+        <view class="title-left">
+          今日训练
+        </view>
+        <view bindtap="viewDayPlan">
+          查看
+        </view>
+      </view>
+      <block wx:if="{{trainDetail.length > 0}}">
+        <view wx:for="{{trainDetail}}" wx:key="id" wx:for-item="item" class="today-exercise-main">
+          <view wx:if="{{item.actionSetType == 'COMMON_SET' && !item.isFinished}}" class="common-exercise">
+            {{item.actionSetTypeName}}</view>
+          <view class="icon-finished" wx:if="{{item.actionSetType == 'COMMON_SET' && item.isFinished}}">
+            <icon type="success" color="#f4af4a"></icon>
+          </view>
+          <view wx:if="{{item.actionSetType == 'SUPER_SET' && !item.isFinished}}" class="super-exercise">
+            {{item.actionSetTypeName}}</view>
+          <view class="icon-finished" wx:if="{{item.actionSetType == 'SUPER_SET' && item.isFinished}}">
+            <icon type="success" color="#ed6368"></icon>
+          </view>
+          <view wx:if="{{item.actionSetType == 'REDUCE_SET' && !item.isFinished}}" class="reduce-exercise">
+            {{item.actionSetTypeName}}</view>
+          <view class="icon-finished" wx:if="{{item.actionSetType == 'REDUCE_SET' && item.isFinished}}">
+            <icon type="success" color="#58bd8b"></icon>
+          </view>
+          <view class="action-name">{{item.actionName}}</view>
+          <view class="action-count">{{item.count}}组</view>
+          <view class="action-weight">{{item.weight ? item.weight + 'kg' : ''}}</view>
+        </view>
+        <view class="today-exercise-finish">
+          <image src="/static/close.png"></image>
+          <view class="finish-name">今日计划完成，请前往评价吧~</view>
+          <image src="/static/go.png" bindtap="evaluate"></image>
+        </view>
+      </block>
+      <view wx:else>
+        <van-empty class="van-empty" image="https://img.yzcdn.cn/vant/custom-empty-image.png" description="暂无计划" />
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+<view>
+  <image src="/static/login.png" class="login-image"></image>
+  <view class="login-text">请登录查看内容</view>
+  <view class="login-main">
+    <van-button wx:if="{{step === 1 }}" color="#FFAD2A" round bindtap="getUserProfile">立即登录</van-button>
+    <label>
+      <van-button wx:if="{{step === 2 }}" color="#FFAD2A" round>手机号授权</van-button>
+      <button wx:if="{{step === 2 }}" open-type="getPhoneNumber" style="display: none"
+        bind:getphonenumber="getPhoneNumber" />
+    </label>
+  </view>
+</view>

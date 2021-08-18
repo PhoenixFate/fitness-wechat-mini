@@ -1,0 +1,16 @@
+var formatGroupName = function (type) {
+  // 1 普通组； 2 超级组合； 3递减组
+  switch (type) {
+    case 1:
+      return '普通组'
+    case 2:
+      return '超级组'
+    case 3:
+      return '递减组'
+    default:
+      return '普通组'
+  }
+}
+module.exports = {
+  formatGroupName: formatGroupName
+};
